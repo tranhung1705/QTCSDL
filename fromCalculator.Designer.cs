@@ -36,18 +36,19 @@
             this.btnTru = new System.Windows.Forms.Button();
             this.btnNhan = new System.Windows.Forms.Button();
             this.btnChia = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSo1
             // 
-            this.txtSo1.Location = new System.Drawing.Point(63, 35);
+            this.txtSo1.Location = new System.Drawing.Point(63, 135);
             this.txtSo1.Name = "txtSo1";
             this.txtSo1.Size = new System.Drawing.Size(134, 22);
             this.txtSo1.TabIndex = 0;
             // 
             // txtSo2
             // 
-            this.txtSo2.Location = new System.Drawing.Point(63, 159);
+            this.txtSo2.Location = new System.Drawing.Point(63, 214);
             this.txtSo2.Name = "txtSo2";
             this.txtSo2.Size = new System.Drawing.Size(134, 22);
             this.txtSo2.TabIndex = 1;
@@ -56,14 +57,14 @@
             // 
             this.txtKQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKQ.ForeColor = System.Drawing.Color.Red;
-            this.txtKQ.Location = new System.Drawing.Point(366, 74);
+            this.txtKQ.Location = new System.Drawing.Point(354, 101);
             this.txtKQ.Name = "txtKQ";
             this.txtKQ.Size = new System.Drawing.Size(204, 34);
             this.txtKQ.TabIndex = 2;
             // 
             // txtSo3
             // 
-            this.txtSo3.Location = new System.Drawing.Point(63, 280);
+            this.txtSo3.Location = new System.Drawing.Point(63, 289);
             this.txtSo3.Name = "txtSo3";
             this.txtSo3.Size = new System.Drawing.Size(134, 22);
             this.txtSo3.TabIndex = 3;
@@ -109,12 +110,23 @@
             this.btnChia.UseVisualStyleBackColor = true;
             this.btnChia.Click += new System.EventHandler(this.btnChia_Click);
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(588, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(89, 26);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // fromCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(689, 392);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnChia);
             this.Controls.Add(this.btnNhan);
             this.Controls.Add(this.btnTru);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Button btnTru;
         private System.Windows.Forms.Button btnNhan;
         private System.Windows.Forms.Button btnChia;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
