@@ -16,11 +16,9 @@ namespace Bai1
         {
             InitializeComponent();
         }
-
-        private void fromCalculator_Click(object sender, EventArgs e)
+          private void fromCalculator_Click(object sender, EventArgs e)
+       
         {
-        
-
 
         }
 
@@ -51,11 +49,11 @@ namespace Bai1
         private void btnNhan_Click(object sender, EventArgs e)
         {
             string sSo1 = txtSo1.Text;
-            int iSo1 = int.Parse(sSo1);
+            int iSo1 = Int32.Parse(sSo1);
             string sSo2 = txtSo2.Text;
-            int iSo2 = int.Parse(sSo2);
+            int iSo2 = Int32.Parse(sSo2);
             string sSo3 = txtSo3.Text;
-            int iSo3 = int.Parse(sSo3);
+            int iSo3 = Int32.Parse(sSo3);
             int iKQ = iSo1 * iSo2 * iSo3;
             txtKQ.Text = iKQ.ToString();
         }
@@ -70,6 +68,15 @@ namespace Bai1
             decimal dSo3 = Convert.ToDecimal(sSo3);
             decimal dKQ = dSo1 / dSo2 / dSo3;
             txtKQ.Text = dKQ.ToString();
+
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo);
+
+        }
+
     }
+
 }
