@@ -55,12 +55,14 @@
             this.quảnLíHàngHóaToolStripMenuItem.Name = "quảnLíHàngHóaToolStripMenuItem";
             this.quảnLíHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.quảnLíHàngHóaToolStripMenuItem.Text = "Quản lí hàng hóa";
+            this.quảnLíHàngHóaToolStripMenuItem.Click += new System.EventHandler(this.quảnLíHàngHóaToolStripMenuItem_Click);
             // 
             // quảnLíNhàCungCấpToolStripMenuItem
             // 
             this.quảnLíNhàCungCấpToolStripMenuItem.Name = "quảnLíNhàCungCấpToolStripMenuItem";
             this.quảnLíNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.quảnLíNhàCungCấpToolStripMenuItem.Text = "Quản lí nhà cung cấp";
+            this.quảnLíNhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.quảnLíNhàCungCấpToolStripMenuItem_Click);
             // 
             // quảnLíHóaĐơnToolStripMenuItem
             // 
@@ -72,19 +74,23 @@
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê hóa đơn nhập";
+            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
             // frmquanlichung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 746);
+            this.ClientSize = new System.Drawing.Size(1047, 661);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmquanlichung";
-            this.Text = "frmquanlichung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lí chung";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmquanlichung_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
