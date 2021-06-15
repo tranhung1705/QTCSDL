@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
+            this.label1.BackColor = System.Drawing.Color.Tomato;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(82, 52);
             this.label1.Name = "label1";
@@ -104,7 +104,6 @@
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Loại hàng";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -115,7 +114,6 @@
             this.label4.Size = new System.Drawing.Size(122, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên cung cấp";
-            this.label4.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtLoaihang
             // 
@@ -142,7 +140,6 @@
             this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Trạng thái";
-            this.label5.Click += new System.EventHandler(this.label3_Click);
             // 
             // rbnCo
             // 
