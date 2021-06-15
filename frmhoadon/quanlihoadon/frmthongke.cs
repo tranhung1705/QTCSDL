@@ -16,5 +16,10 @@ namespace quanlihoadon
         {
             InitializeComponent();
         }
+
+        private void frmthongke_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
