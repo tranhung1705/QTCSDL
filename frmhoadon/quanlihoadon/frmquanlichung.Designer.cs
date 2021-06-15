@@ -46,46 +46,54 @@
             this.thốngKêToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1047, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1570, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // quảnLíHàngHóaToolStripMenuItem
             // 
+            this.quảnLíHàngHóaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLíHàngHóaToolStripMenuItem.Name = "quảnLíHàngHóaToolStripMenuItem";
-            this.quảnLíHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.quảnLíHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(170, 29);
             this.quảnLíHàngHóaToolStripMenuItem.Text = "Quản lí hàng hóa";
             this.quảnLíHàngHóaToolStripMenuItem.Click += new System.EventHandler(this.quảnLíHàngHóaToolStripMenuItem_Click);
             // 
             // quảnLíNhàCungCấpToolStripMenuItem
             // 
+            this.quảnLíNhàCungCấpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLíNhàCungCấpToolStripMenuItem.Name = "quảnLíNhàCungCấpToolStripMenuItem";
-            this.quảnLíNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.quảnLíNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(204, 29);
             this.quảnLíNhàCungCấpToolStripMenuItem.Text = "Quản lí nhà cung cấp";
             this.quảnLíNhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.quảnLíNhàCungCấpToolStripMenuItem_Click);
             // 
             // quảnLíHóaĐơnToolStripMenuItem
             // 
+            this.quảnLíHóaĐơnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLíHóaĐơnToolStripMenuItem.Name = "quảnLíHóaĐơnToolStripMenuItem";
-            this.quảnLíHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.quảnLíHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(160, 29);
             this.quảnLíHóaĐơnToolStripMenuItem.Text = "Quản lí hóa đơn";
             this.quảnLíHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLíHóaĐơnToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
+            this.thốngKêToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(225, 29);
             this.thốngKêToolStripMenuItem.Text = "Thống kê hóa đơn nhập";
             this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
             // frmquanlichung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 661);
+            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.ClientSize = new System.Drawing.Size(1570, 1033);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmquanlichung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí chung";
