@@ -96,6 +96,7 @@
             this.Name = "frmthongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";
+            this.Load += new System.EventHandler(this.frmthongke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
