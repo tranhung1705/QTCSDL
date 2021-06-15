@@ -99,6 +99,7 @@
             this.Text = "Quản lí chung";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmquanlichung_FormClosing);
+            this.Load += new System.EventHandler(this.frmquanlichung_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
