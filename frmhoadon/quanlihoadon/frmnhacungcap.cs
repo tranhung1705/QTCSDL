@@ -27,7 +27,7 @@ namespace quanlihoadon
             {
                 con.Open();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Đã xảy ra lỗi trong quá trình kết nối DB");
             }

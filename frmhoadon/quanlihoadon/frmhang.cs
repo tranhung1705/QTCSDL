@@ -34,7 +34,6 @@ namespace quanlihoadon
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
 
             DataSet ds = new DataSet();
-
             adapter.Fill(ds, "HANG");
             dataGridView1.DataSource = ds.Tables["HANG"];
             con.Close();
@@ -123,7 +122,7 @@ namespace quanlihoadon
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Cập nhật thành công!");
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!");
             }
@@ -184,7 +183,7 @@ namespace quanlihoadon
                 {
                     con.Open();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Đã xảy ra lỗi trong qúa trình kết nối db");
                 }

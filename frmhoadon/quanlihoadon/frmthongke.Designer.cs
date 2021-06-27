@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(335, 32);
+            this.label1.Location = new System.Drawing.Point(258, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 29);
             this.label1.TabIndex = 0;
@@ -53,13 +53,13 @@
             this.dataGridView1.Location = new System.Drawing.Point(58, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(942, 457);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 306);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnHienthi
             // 
             this.btnHienthi.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnHienthi.Location = new System.Drawing.Point(469, 595);
+            this.btnHienthi.Location = new System.Drawing.Point(418, 458);
             this.btnHienthi.Name = "btnHienthi";
             this.btnHienthi.Size = new System.Drawing.Size(132, 46);
             this.btnHienthi.TabIndex = 2;
@@ -69,7 +69,8 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(84, 605);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(85, 468);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker1.TabIndex = 3;
@@ -77,7 +78,8 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(710, 605);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(614, 468);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker2.TabIndex = 3;
@@ -87,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrange;
-            this.ClientSize = new System.Drawing.Size(1088, 713);
+            this.ClientSize = new System.Drawing.Size(931, 519);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnHienthi);
