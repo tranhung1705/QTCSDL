@@ -36,7 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbMaH = new System.Windows.Forms.ComboBox();
             this.txtTenH = new System.Windows.Forms.TextBox();
             this.txtSoluongton = new System.Windows.Forms.TextBox();
             this.txtDongianhap = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.txtMaH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,16 +130,6 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Đơn giá bán";
             // 
-            // cbMaH
-            // 
-            this.cbMaH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaH.FormattingEnabled = true;
-            this.cbMaH.Location = new System.Drawing.Point(157, 137);
-            this.cbMaH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMaH.Name = "cbMaH";
-            this.cbMaH.Size = new System.Drawing.Size(268, 28);
-            this.cbMaH.TabIndex = 3;
-            // 
             // txtTenH
             // 
             this.txtTenH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,6 +213,15 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // txtMaH
+            // 
+            this.txtMaH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaH.Location = new System.Drawing.Point(157, 137);
+            this.txtMaH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaH.Name = "txtMaH";
+            this.txtMaH.Size = new System.Drawing.Size(268, 27);
+            this.txtMaH.TabIndex = 4;
+            // 
             // frmhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,8 +235,8 @@
             this.Controls.Add(this.txtDongiaban);
             this.Controls.Add(this.txtDongianhap);
             this.Controls.Add(this.txtSoluongton);
+            this.Controls.Add(this.txtMaH);
             this.Controls.Add(this.txtTenH);
-            this.Controls.Add(this.cbMaH);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -267,7 +266,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbMaH;
         private System.Windows.Forms.TextBox txtTenH;
         private System.Windows.Forms.TextBox txtSoluongton;
         private System.Windows.Forms.TextBox txtDongianhap;
@@ -276,5 +274,6 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox txtMaH;
     }
 }
