@@ -16,6 +16,7 @@ namespace quanlihoadon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmdangnhap());
             Application.Run(new frmquanlichung());
         }
     }
