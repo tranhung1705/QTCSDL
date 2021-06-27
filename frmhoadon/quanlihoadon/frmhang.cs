@@ -13,7 +13,7 @@ namespace quanlihoadon
 {
     public partial class frmhang : Form
     {
-        string sCon = "Data Source=.\\SQLEXPRESS03;Initial Catalog=CUAHANG_TAPHOA;Integrated Security=True";
+        string sCon = "Data Source=.\\sqlExpress;Initial Catalog=CUAHANG_TAPHOA;Integrated Security=True";
         public frmhang()
         {
             InitializeComponent();
@@ -32,9 +32,8 @@ namespace quanlihoadon
             }
             string sQuery = " select * from HANG ";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
-
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "HANG");
+            adapter.Fill(ds,"HANG");
             dataGridView1.DataSource = ds.Tables["HANG"];
             con.Close();
         }
@@ -50,7 +49,7 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Đã xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sMaH = cbMaH.Text;
+            string sMaH = txtMaH.Text;
             string sTenH = txtTenH.Text;
             string sSoLuongTon = txtSoluongton.Text;
             string sDonGiaNhap = txtDongianhap.Text;
@@ -83,13 +82,13 @@ namespace quanlihoadon
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cbMaH.Text = dataGridView1.Rows[e.RowIndex].Cells["MaH"].Value.ToString();
+            txtMaH.Text = dataGridView1.Rows[e.RowIndex].Cells["MaH"].Value.ToString();
             txtTenH.Text = dataGridView1.Rows[e.RowIndex].Cells["TenH"].Value.ToString();
             txtSoluongton.Text = dataGridView1.Rows[e.RowIndex].Cells["SoLuongTon"].Value.ToString();
             txtDongianhap.Text = dataGridView1.Rows[e.RowIndex].Cells["DonGiaNhap"].Value.ToString();
             txtDongiaban.Text = dataGridView1.Rows[e.RowIndex].Cells["DonGiaBan"].Value.ToString();
 
-            cbMaH.Enabled = false;
+            txtMaH.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -103,7 +102,7 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Đã xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sMaH = cbMaH.Text;
+            string sMaH = txtMaH.Text;
             string sTenH = txtTenH.Text;
             string sSoLuongTon = txtSoluongton.Text;
             string sDonGiaNhap = txtDongianhap.Text;
@@ -150,7 +149,7 @@ namespace quanlihoadon
                 {
                     MessageBox.Show("Đã xảy ra lỗi trong quá trình kết nối DB");
                 }
-                string sMaH = cbMaH.Text;
+                string sMaH = txtMaH.Text;
 
                 string sQuery = "delete HANG where MaH= @MaH";
                 SqlCommand cmd = new SqlCommand(sQuery, con);
