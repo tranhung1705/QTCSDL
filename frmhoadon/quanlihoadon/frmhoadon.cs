@@ -151,7 +151,7 @@ namespace quanlihoadon
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
             int iMaHD = Convert.ToInt16(txtMaHD.Text);
-            string sNgayNhap = daNgaynhap.Value.ToString("yyyy-MM-dd"); //kiem tra lại dinh dang nay co dung trong CSDL ko
+            string sNgayNhap = daNgaynhap.Value.ToString("yyyy-MM-dd"); 
             string sGioNhap = daGionhap.Value.ToString("h:mm:ss");
             string sMaCungCap = cbMaCC.Text;
             string sTongtien = txtTongtien.Text;
@@ -175,7 +175,7 @@ namespace quanlihoadon
                 MessageBox.Show(ex.ToString());
             }
             int iCount = DataGridView1.Rows.Count;
-            for (int i = 0; i < iCount; i++) //check lại
+            for (int i = 0; i < iCount-1; i++) 
             {
             string sQuery1 = "insert into HDNHAP_CHI_TIET values(@MaHDN, @MaH, @SoLuongNhap, @Thanhtien)";
             SqlCommand cmd1 = new SqlCommand(sQuery1, con);
@@ -210,7 +210,7 @@ namespace quanlihoadon
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
             int iMaHD = Convert.ToInt16(txtMaHD.Text);
-            string sNgayNhap = daNgaynhap.Value.ToString("yy-MM-dd");
+            string sNgayNhap = daNgaynhap.Value.ToString("yyyy-MM-dd");
             string sGioNhap = daGionhap.Value.ToString("h:mm:ss");
             string sMaCungCap = cbMaCC.Text;
             string sTongtien = txtTongtien.Text;
@@ -234,7 +234,7 @@ namespace quanlihoadon
                 MessageBox.Show(ex.ToString());
             }
              int iCount = DataGridView1.Rows.Count;
-             for (int i = 0; i < iCount; i++)
+             for (int i = 0; i < iCount-1; i++)
              {
                  string sQuery1 = "Update HDNHAP_CHI_TIET set MaH = @MaH, SoLuongNhap = @SoLuongNhap, Thanhtien = @Thanhtien where MaHD = @MaHD";
                  SqlCommand cmd1 = new SqlCommand(sQuery1, con);
@@ -261,6 +261,14 @@ namespace quanlihoadon
         private void btnXoaHD_Click(object sender, EventArgs e)
         {
             {
+                string sMaHDN = "";
+                if (txtMaHD.Text == "")
+                {
+
+                }
+                else
+                    sMaHDN = txtMaHD.Text;
+
                 DialogResult ret = MessageBox.Show("Bạn có chắc xóa không!", "Thông báo", MessageBoxButtons.OKCancel);
                 if (ret == DialogResult.OK)
                 {
@@ -273,7 +281,7 @@ namespace quanlihoadon
                     {
                         MessageBox.Show(ex.ToString());
                     }
-                    string sMaHDN = "";
+                
                     string sQuery = " delete HDNHAP_CHI_TIET where MaHDN = @MaHDN";
                     string sQuery1 = " delete HOADON_NHAP where MaHDN = @MaHDN";
                     SqlCommand cmd = new SqlCommand(sQuery, con);
@@ -285,6 +293,12 @@ namespace quanlihoadon
                         cmd.ExecuteNonQuery();
                         cmd1.ExecuteNonQuery();
                         MessageBox.Show("Xóa thành công!", "Thông báo");
+                        txtDongia.Text = "";
+                        txtMaHD.Text = "";
+                        txtTongtien.Text = "";
+                        txtThanhtien.Text = "";
+                        txtSoluong.Text = "";
+                        txtTimkiem.Text = "";
                     }
                     catch (Exception)
                     {
@@ -347,10 +361,9 @@ namespace quanlihoadon
             }
             catch(Exception ex)
             {
-
+               
             }
-           
-
+          
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
