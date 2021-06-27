@@ -32,7 +32,6 @@
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbMaCC = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLoaihang = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtMaCC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,21 +83,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 122);
+            this.label2.Location = new System.Drawing.Point(21, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã cung cấp";
-            // 
-            // cbMaCC
-            // 
-            this.cbMaCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaCC.FormattingEnabled = true;
-            this.cbMaCC.Location = new System.Drawing.Point(169, 122);
-            this.cbMaCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMaCC.Name = "cbMaCC";
-            this.cbMaCC.Size = new System.Drawing.Size(267, 26);
-            this.cbMaCC.TabIndex = 3;
             // 
             // label3
             // 
@@ -220,6 +210,15 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // txtMaCC
+            // 
+            this.txtMaCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCC.Location = new System.Drawing.Point(169, 132);
+            this.txtMaCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaCC.Name = "txtMaCC";
+            this.txtMaCC.Size = new System.Drawing.Size(267, 24);
+            this.txtMaCC.TabIndex = 4;
+            // 
             // frmnhacungcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,9 +228,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rbnKhong);
             this.Controls.Add(this.rbnCo);
+            this.Controls.Add(this.txtMaCC);
             this.Controls.Add(this.txtTenCC);
             this.Controls.Add(this.txtLoaihang);
-            this.Controls.Add(this.cbMaCC);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
@@ -259,7 +258,6 @@
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbMaCC;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLoaihang;
@@ -271,5 +269,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtMaCC;
     }
 }
