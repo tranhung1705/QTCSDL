@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmhang));
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
@@ -245,9 +246,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTimkiem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmhang";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí hàng hóa";
             this.Load += new System.EventHandler(this.frmhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
