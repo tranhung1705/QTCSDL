@@ -32,6 +32,9 @@ namespace quanlihoadon
                 if(dta.Read() == true)
                 {
                     MessageBox.Show("Đăng nhập thành công");
+                    frmquanlichung TK = new frmquanlichung();
+                    TK.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -47,7 +50,13 @@ namespace quanlihoadon
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dr;
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
