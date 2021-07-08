@@ -125,13 +125,14 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!");
             }
+            
             string sQuery1 = "Select * from HANG";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery1, con);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "HANG");
             dataGridView1.DataSource = ds.Tables["HANG"];
             con.Close();
-
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
