@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthongke));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHienthi = new System.Windows.Forms.Button();
             this.date1 = new System.Windows.Forms.DateTimePicker();
             this.date2 = new System.Windows.Forms.DateTimePicker();
+            this.txtTong = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,10 +53,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 146);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(839, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 241);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnHienthi
@@ -87,17 +90,39 @@
             this.date2.Size = new System.Drawing.Size(255, 30);
             this.date2.TabIndex = 3;
             // 
+            // txtTong
+            // 
+            this.txtTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTong.Location = new System.Drawing.Point(352, 410);
+            this.txtTong.Name = "txtTong";
+            this.txtTong.Size = new System.Drawing.Size(253, 30);
+            this.txtTong.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LawnGreen;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(202, 404);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 36);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Tổng";
+            // 
             // frmthongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrange;
             this.ClientSize = new System.Drawing.Size(931, 479);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTong);
             this.Controls.Add(this.date2);
             this.Controls.Add(this.date1);
             this.Controls.Add(this.btnHienthi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmthongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";
@@ -115,5 +140,7 @@
         private System.Windows.Forms.Button btnHienthi;
         private System.Windows.Forms.DateTimePicker date1;
         private System.Windows.Forms.DateTimePicker date2;
+        private System.Windows.Forms.TextBox txtTong;
+        private System.Windows.Forms.Label label2;
     }
 }
