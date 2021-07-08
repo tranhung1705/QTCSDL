@@ -6,7 +6,7 @@ constraint PK_HOA_DON_NHAP Primary key(MaHDN, MaCC))
 create table HDNHAP_CHI_TIET(MaHDN int not null, MaH int not null,
 SoLuongNhap int not null, Thanhtien int,
 constraint PK_HDNHAP_CHI_TIET Primary key(MaHDN, MaH))
-insert into HOA_DON_NHAP
+insert into HOADON_NHAP
 values ('1','2021-12-12','12:22:20.6000000','123456789','0'),
        ('2','2021-11-12','19:12:20.5000000','123456783','0'),
 	   ('3','2020-10-12','15:72:20.6000000','123456785','0'),
@@ -17,6 +17,8 @@ values ('1','2021-12-12','12:22:20.6000000','123456789','0'),
 	   ('5','2021-07-12','09:52:20.6000000','123456788','0'),
 	   ('9','2021-02-10','23:11:20.8000000','123456787','0'),
 	   ('10','2021-01-12','11:12:20.1000000','123456784','0')
+
+select * from HOADON_NHAP
 
 insert into HDNHAP_CHI_TIET
 values ('1','508','20','2000000'),
@@ -29,3 +31,5 @@ values ('1','508','20','2000000'),
 	   ('8','507','10','2000000'),
 	   ('9','506','5','5000000'),
 	   ('10','504','20','200000')
+
+select * from HDNHAP_CHI_TIET
