@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmhoadon));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.cbMaCC = new System.Windows.Forms.ComboBox();
             this.btnSuaHD = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.cbTenH = new System.Windows.Forms.ComboBox();
             this.txtSoluong = new System.Windows.Forms.TextBox();
             this.txtThanhtien = new System.Windows.Forms.TextBox();
@@ -61,6 +63,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,7 +132,7 @@
             this.DataGridView1.Location = new System.Drawing.Point(48, 373);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowTemplate.Height = 24;
-            this.DataGridView1.Size = new System.Drawing.Size(962, 180);
+            this.DataGridView1.Size = new System.Drawing.Size(962, 140);
             this.DataGridView1.TabIndex = 2;
             this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -218,7 +221,7 @@
             // btnThemHD
             // 
             this.btnThemHD.BackColor = System.Drawing.Color.LawnGreen;
-            this.btnThemHD.Location = new System.Drawing.Point(191, 559);
+            this.btnThemHD.Location = new System.Drawing.Point(133, 531);
             this.btnThemHD.Name = "btnThemHD";
             this.btnThemHD.Size = new System.Drawing.Size(130, 43);
             this.btnThemHD.TabIndex = 5;
@@ -229,7 +232,7 @@
             // btnXoaHD
             // 
             this.btnXoaHD.BackColor = System.Drawing.Color.LawnGreen;
-            this.btnXoaHD.Location = new System.Drawing.Point(633, 559);
+            this.btnXoaHD.Location = new System.Drawing.Point(595, 531);
             this.btnXoaHD.Name = "btnXoaHD";
             this.btnXoaHD.Size = new System.Drawing.Size(130, 43);
             this.btnXoaHD.TabIndex = 5;
@@ -267,7 +270,7 @@
             // btnSuaHD
             // 
             this.btnSuaHD.BackColor = System.Drawing.Color.LawnGreen;
-            this.btnSuaHD.Location = new System.Drawing.Point(412, 559);
+            this.btnSuaHD.Location = new System.Drawing.Point(360, 531);
             this.btnSuaHD.Name = "btnSuaHD";
             this.btnSuaHD.Size = new System.Drawing.Size(130, 43);
             this.btnSuaHD.TabIndex = 5;
@@ -277,6 +280,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.cbTenH);
             this.groupBox1.Controls.Add(this.txtSoluong);
             this.groupBox1.Controls.Add(this.txtThanhtien);
@@ -291,6 +295,16 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(411, 59);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(108, 31);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Thêm vào giỏ";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbTenH
             // 
@@ -384,12 +398,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chung";
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnClear.Location = new System.Drawing.Point(827, 531);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(129, 43);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "Trở về";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmhoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrange;
-            this.ClientSize = new System.Drawing.Size(1025, 609);
+            this.ClientSize = new System.Drawing.Size(1025, 583);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSuaHD);
@@ -402,6 +428,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmhoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí hóa đơn";
@@ -451,6 +478,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
