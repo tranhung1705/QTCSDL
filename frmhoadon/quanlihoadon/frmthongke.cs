@@ -41,13 +41,20 @@ namespace quanlihoadon
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@from", sFrom);
             cmd.Parameters.AddWithValue("@to", sTo);
+            DataTable TK = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(TK);
+            dataGridView1.DataSource = TK;
+            if (TK.Rows.Count > 0)
+            {
+            txtTong.Text = (Convert.ToInt32(TK.Compute("SUM (TongTien)", string.Empty)).ToString());
+            }
+            else
+           
             try
             {
                 cmd.ExecuteNonQuery();
-                DataTable TK = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(TK);
-                dataGridView1.DataSource = TK;
+               
             }
             catch (Exception ex)
             {
