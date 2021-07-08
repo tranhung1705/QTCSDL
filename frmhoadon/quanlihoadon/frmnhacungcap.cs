@@ -177,11 +177,11 @@ namespace quanlihoadon
                 {
                     MessageBox.Show("Đã xảy ra lỗi trong quá trình xóa!", "Thông báo");
                 }
-                string sQuery1 = "Select * from HANG";
+                string sQuery1 = "Select * from CUNG_CAP";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery1, con);
                 DataSet ds = new DataSet();
-                adapter.Fill(ds, "HANG");
-                dataGridView1.DataSource = ds.Tables["HANG"];
+                adapter.Fill(ds, "CUNG_CAP");
+                dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
                 con.Close();
             }
 
