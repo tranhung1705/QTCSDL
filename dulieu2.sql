@@ -1,4 +1,4 @@
-Create database CUAHANG_TAPHOA
+﻿Create database CUAHANG_TAPHOA
 use CUAHANG_TAPHOA
 create table HOA_DON_NHAP(MaHDN int not null, NgayNhap date not null,
 GioNhap time not null,MaCC int not null, Tongtien int,
@@ -19,6 +19,8 @@ values ('1','2021-12-12','12:22:20.6000000','123456789','0'),
 	   ('10','2021-01-12','11:12:20.1000000','123456784','0')
 
 select * from HOADON_NHAP
+select * from CUNG_CAP
+
 
 insert into HDNHAP_CHI_TIET
 values ('1','508','20','2000000'),
@@ -33,3 +35,20 @@ values ('1','508','20','2000000'),
 	   ('10','504','20','200000')
 
 select * from HDNHAP_CHI_TIET
+select * from HANG
+select * from CUNG_CAP
+
+Update HANG
+Set SoLuongTon = SoLuongTon + SoLuongNhap
+From HDNHAP_CHI_TIET inner join HANG
+On HDNHAP_CHI_TIET.MaH=HANG.MaH
+select * from HANG
+
+
+select * from HOADON_NHAP
+select * from HOADON_NHAP join HDNHAP_CHI_TIET on HOADON_NHAP.MaHDN = HDNHAP_CHI_TIET.MaHDN
+
+
+
+
+
