@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangnhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,7 +77,7 @@
             this.txtTendangnhap.Location = new System.Drawing.Point(276, 107);
             this.txtTendangnhap.Name = "txtTendangnhap";
             this.txtTendangnhap.Size = new System.Drawing.Size(263, 28);
-            this.txtTendangnhap.TabIndex = 1;
+            this.txtTendangnhap.TabIndex = 2;
             // 
             // txtMatkhau
             // 
@@ -117,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrange;
+            this.BackColor = System.Drawing.Color.Gold;
             this.BackgroundImage = global::quanlihoadon.Properties.Resources.Du_lich_da_nang_cam_nhan_cuoc_song_nhe_nhang_mau_la_vang__FILEminimizer_;
             this.ClientSize = new System.Drawing.Size(713, 434);
             this.Controls.Add(this.btnThoat);
@@ -127,10 +126,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmdangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập tài khoản";
+            this.Load += new System.EventHandler(this.frmdangnhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

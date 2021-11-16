@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthongke));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHienthi = new System.Windows.Forms.Button();
@@ -44,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(258, 31);
+            this.label1.Location = new System.Drawing.Point(251, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 29);
             this.label1.TabIndex = 0;
@@ -93,9 +92,9 @@
             // txtTong
             // 
             this.txtTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTong.Location = new System.Drawing.Point(352, 410);
+            this.txtTong.Location = new System.Drawing.Point(323, 404);
             this.txtTong.Name = "txtTong";
-            this.txtTong.Size = new System.Drawing.Size(253, 30);
+            this.txtTong.Size = new System.Drawing.Size(304, 30);
             this.txtTong.TabIndex = 4;
             // 
             // label2
@@ -103,17 +102,17 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LawnGreen;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(202, 404);
+            this.label2.Location = new System.Drawing.Point(119, 404);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 36);
+            this.label2.Size = new System.Drawing.Size(150, 36);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Tổng";
+            this.label2.Text = "Tổng Tiền";
             // 
             // frmthongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrange;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(931, 479);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTong);
@@ -122,7 +121,6 @@
             this.Controls.Add(this.btnHienthi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmthongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";

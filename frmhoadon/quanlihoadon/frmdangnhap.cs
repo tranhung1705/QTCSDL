@@ -20,7 +20,7 @@ namespace quanlihoadon
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=.\sqlExpress;Initial Catalog=CUAHANG_TAPHOA;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"");
             try
             {
                 conn.Open();
@@ -32,9 +32,6 @@ namespace quanlihoadon
                 if(dta.Read() == true)
                 {
                     MessageBox.Show("Đăng nhập thành công");
-                    frmquanlichung TK = new frmquanlichung();
-                    TK.Show();
-                    this.Hide();
                 }
                 else
                 {
@@ -50,13 +47,12 @@ namespace quanlihoadon
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult dr;
-            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            
+            Application.Exit();
+        }
+
+        private void frmdangnhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

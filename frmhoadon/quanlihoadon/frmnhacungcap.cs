@@ -13,7 +13,7 @@ namespace quanlihoadon
 {
     public partial class frmnhacungcap : Form
     {
-        string sCon = "Data Source=.\\SqlExpress;Initial Catalog=CUAHANG_TAPHOA;Integrated Security=True";
+        string sCon = "";
         public frmnhacungcap()
         {
             InitializeComponent();
@@ -31,11 +31,11 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            String sQuery = "select * from CUNG_CAP";
+            String sQuery = "select * from NHACUNGCAP";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "CUNG_CAP");
-            dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
+            adapter.Fill(ds, "NHACUNGCAP");
+            dataGridView1.DataSource = ds.Tables["NHACUNGCAP"];
             con.Close();
             
         }
@@ -54,19 +54,16 @@ namespace quanlihoadon
             }
             String sMaCC = txtMaCC.Text;
             String sTenCC = txtTenCC.Text;
-            String sLoaiHang = txtLoaihang.Text;
-            String iTrangThai = "Co";
-            if (rbnCo.Checked == true)
-            {
-                iTrangThai = "Khong";
-            }
+            String sDiachi = txtDiachi.Text;
+            string sSodienthoai = txtSodienthoai.Text;
+           
 
-            String sQuery = " insert into CUNG_CAP values(@MaCC, @TenCC, @LoaiHang, @TrangThai)";
+            String sQuery = " insert into NHACUNGCAP values(@MaNCC, @TenNCC, @DiaChi, @Sđt)";
             SqlCommand cmd = new SqlCommand(sQuery, con);
-            cmd.Parameters.AddWithValue("@MaCC", sMaCC);
-            cmd.Parameters.AddWithValue("@TenCC", sTenCC);
-            cmd.Parameters.AddWithValue("@LoaiHang", sLoaiHang);
-            cmd.Parameters.AddWithValue("@TrangThai", iTrangThai);
+            cmd.Parameters.AddWithValue("@MaNCC", sMaCC);
+            cmd.Parameters.AddWithValue("@TenNCC", sTenCC);
+            cmd.Parameters.AddWithValue("@DiaChi", sDiachi);
+            cmd.Parameters.AddWithValue("@Sđt", sSodienthoai);
 
             try
             {
@@ -78,31 +75,25 @@ namespace quanlihoadon
                 MessageBox.Show("Đã xảy ra lỗi trong quá trình thêm mới!", "Thông báo");
             }
             
-            string sQuery1 = "Select * from CUNG_CAP";
+            string sQuery1 = "Select * from NHACUNGCAP ";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery1, con);
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "CUNG_CAP");
-            dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
+            adapter.Fill(ds, "NHACUNGCAP ");
+            dataGridView1.DataSource = ds.Tables["NHACUNGCAP "];
             con.Close();
 
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaCC.Text = dataGridView1.Rows[e.RowIndex].Cells["MaCC"].Value.ToString();
-            txtTenCC.Text = dataGridView1.Rows[e.RowIndex].Cells["TenCC"].Value.ToString();
-            txtLoaihang.Text = dataGridView1.Rows[e.RowIndex].Cells["LoaiHang"].Value.ToString();
-            string iTrangThai = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["TrangThai"].Value);
-            if (iTrangThai == "Co")
-            {
-                rbnCo.Checked = true;
-            }
-            else
-            {
-                rbnKhong.Checked = true;
-            }
-            txtMaCC.Enabled = false;
+            txtMaCC.Text = dataGridView1.Rows[e.RowIndex].Cells["MaNCC"].Value.ToString();
+            txtTenCC.Text = dataGridView1.Rows[e.RowIndex].Cells["TenNCC"].Value.ToString();
+            txtDiachi.Text = dataGridView1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
+            txtSodienthoai.Text = dataGridView1.Rows[e.RowIndex].Cells["Sđt"].Value.ToString();
 
+           
+            txtMaCC.Enabled = false;
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -118,18 +109,15 @@ namespace quanlihoadon
             }
             String sMaCC = txtMaCC.Text;
             String sTenCC = txtTenCC.Text;
-            String sLoaiHang = txtLoaihang.Text;
-            String iTrangThai = "Co";
-            if (rbnCo.Checked == true)
-            {
-                iTrangThai = "Khong";
-            }
-            String sQuery = "update CUNG_CAP set TenCC = @TenCC, Loaihang = @LoaiHang, Trangthai= @TrangThai where MaCC = @MaCC ";
+            String sDiachi = txtDiachi.Text;
+            String sSodienthoai = txtSodienthoai.Text;
+           
+            String sQuery = "update NHACUNGCAP set TenCC = @TenNCC, Diachi = @DiaChi, Sodienthoai= @Sđt where MaCC = @MaNCC ";
             SqlCommand cmd = new SqlCommand(sQuery, con);
-            cmd.Parameters.AddWithValue("@MaCC", sMaCC);
-            cmd.Parameters.AddWithValue("@TenCC", sTenCC);
-            cmd.Parameters.AddWithValue("@LoaiHang", sLoaiHang);
-            cmd.Parameters.AddWithValue("@TrangThai", iTrangThai);
+            cmd.Parameters.AddWithValue("@MaNCC", sMaCC);
+            cmd.Parameters.AddWithValue("@TenNCC", sTenCC);
+            cmd.Parameters.AddWithValue("@DiaChi", sDiachi);
+            cmd.Parameters.AddWithValue("@Sđt", sSodienthoai);
 
             try
             {
@@ -140,11 +128,11 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Đã xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
             }
-            string sQuery1 = "Select * from CUNG_CAP";
+            string sQuery1 = "Select * from NHACUNGCAP";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery1, con);
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "CUNG_CAP");
-            dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
+            adapter.Fill(ds, "NHACUNGCAP");
+            dataGridView1.DataSource = ds.Tables["NHACUNGCAP"];
 
             con.Close();
         }
@@ -164,7 +152,7 @@ namespace quanlihoadon
                     MessageBox.Show("Đã xảy ra lỗi trong qúa trình kết nối ");
                 }
                 String sMaCC = txtMaCC.Text;
-                String sQuery = "  delete CUNG_CAP where MaCC = @MaCC";
+                String sQuery = "  delete NHACUNGCAP where MaCC = @MaNCC";
                 SqlCommand cmd = new SqlCommand(sQuery, con);
                 cmd.Parameters.AddWithValue("MaCC", sMaCC);
 
@@ -177,11 +165,11 @@ namespace quanlihoadon
                 {
                     MessageBox.Show("Đã xảy ra lỗi trong quá trình xóa!", "Thông báo");
                 }
-                string sQuery1 = "Select * from CUNG_CAP";
+                string sQuery1 = "Select * from HANGHOA";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery1, con);
                 DataSet ds = new DataSet();
-                adapter.Fill(ds, "CUNG_CAP");
-                dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
+                adapter.Fill(ds, "HANGHOA");
+                dataGridView1.DataSource = ds.Tables["HANGHOA"];
                 con.Close();
             }
 
@@ -199,20 +187,20 @@ namespace quanlihoadon
                 MessageBox.Show("Xảy ra lỗi trong  trong qúa trình kết nối");
             }
 
-            String sQuery = "Select * from CUNG_CAP where TenCC like N'%" + txtTimkiem.Text + "%'";
+            String sQuery = "Select * from NHACUNGCAP where TenCC like N'%" + txtTimkiem.Text + "%'";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
 
             DataSet ds = new DataSet();
             try
             {
-                adapter.Fill(ds, "CUNG_CAP");
+                adapter.Fill(ds, "NHACUNGCAP");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
 
-            dataGridView1.DataSource = ds.Tables["CUNG_CAP"];
+            dataGridView1.DataSource = ds.Tables["NHACUNGCAP"];
 
             con.Close();
 

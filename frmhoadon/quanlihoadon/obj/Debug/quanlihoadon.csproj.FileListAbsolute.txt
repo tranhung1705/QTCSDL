@@ -26,3 +26,18 @@ C:\Users\Acer\Documents\TTNT45K_06\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon
 C:\Users\Acer\Documents\TTNT45K_06\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmthongke.resources
 C:\Users\Acer\Documents\TTNT45K_06\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.Properties.Resources.resources
 C:\Users\Acer\Documents\TTNT45K_06\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.csproj.GenerateResource.Cache
+D:\frmhoadon\quanlihoadon\bin\Debug\quanlihoadon.exe.config
+D:\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.exe
+D:\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.pdb
+D:\năm 2\frmhoadon\quanlihoadon\bin\Debug\quanlihoadon.exe.config
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.exe
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.pdb
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.csprojResolveAssemblyReference.cache
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmdangnhap.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmhang.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmhoadon.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmnhacungcap.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmquanlichung.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.frmthongke.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.Properties.Resources.resources
+D:\năm 2\frmhoadon\quanlihoadon\obj\Debug\quanlihoadon.csproj.GenerateResource.Cache

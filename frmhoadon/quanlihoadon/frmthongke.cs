@@ -13,7 +13,7 @@ namespace quanlihoadon
 {
     public partial class frmthongke : Form
     {
-        string sCon = "Data Source=.\\sqlExpress;Initial Catalog=CUAHANG_TAPHOA;Integrated Security=True";
+        string sCon = "";
         public frmthongke()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace quanlihoadon
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sQuery = "select TenH,TenCC, SUM(SoLuongNhap)SoLuongNhap, SUM(ThanhTien)TongTien from HANG join HDNHAP_CHI_TIET on HANG.MaH = HDNHAP_CHI_TIET.MaH join HOADON_NHAP on HOADON_NHAP.MaHDN = HDNHAP_CHI_TIET.MAHDN join CUNG_CAP on CUNG_CAP.MaCC = HOADON_NHAP.MaCC where NgayNhap between @from and @to group by TenH, TenCC ";
+            string sQuery = "select TenHH,TenNCC, SUM(SoLuong)SoLuongNhap, SUM(ThanhTien)TongTien from HANGHOA join NHAP_CHITIET on HANGHOA.MaHH = NHAP_CHITIET.MaHH join NHAP on NHAP.MaHDN = NHAP_CHITIET.MaHDN join NHACUNGCAP on NHACUNGCAP.MaNCC = NHAP.MaNCC where NgayLapHD between @from and @to group by TenHH, TenNCC ";
             string sFrom = date1.Value.ToString("yyyy-MM-dd");
             string sTo = date2.Value.ToString("yyyy-MM-dd");
             SqlCommand cmd = new SqlCommand(sQuery, con);
